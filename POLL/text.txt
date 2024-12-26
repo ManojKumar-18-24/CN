@@ -1,0 +1,14 @@
+HI RA!!!!!!!!!!
+
+Named Pipe or FIFO with example C program
+Last Updated : 29 Aug, 2024
+
+In computing, a named pipe, also known as a FIFO (First In, First Out), is a powerful mechanism for inter-process communication (IPC). Unlike unnamed pipes, which are temporary and exist only as long as the process that created them is running, named pipes provide a persistent communication channel between processes, surviving beyond the life of the process that created them. This makes named pipes an essential tool for developers who need processes to exchange data reliably and efficiently.
+What is a Named Pipe (FIFO)?
+
+A named pipe is an extension of the traditional pipe concept in Unix. While a traditional pipe is “unnamed” and exists only temporarily, a named pipe can persist as long as the system is up or until it is explicitly deleted. Named pipes appear as special files in the filesystem, and multiple processes can attach to them for reading and writing, facilitating inter-process communication.
+
+A FIFO file allows two or more processes to communicate by reading from and writing to the same file. This type of file is created using the ‘mkfifo()’ system call in C. Once created, any process can open the named pipe for reading or writing, similar to how it would handle an ordinary file. However, it is important to note that a named pipe must be opened at both ends (for reading and writing) simultaneously before any input or output operations can occur.
+How to Create a Named Pipe (FIFO) in Unix
+
+To create a FIFO special file, you use the ‘mkfifo()’ function in C. The function creates a named pipe with the specified pathname and permissions.

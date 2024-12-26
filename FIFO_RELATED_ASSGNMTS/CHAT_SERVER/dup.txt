@@ -1,0 +1,26 @@
+   //while(1)
+    //{
+         ret=poll(fds,nfd,timeout);
+         printf("ret= %d \n",ret);
+         //for(int i=0;i<2;i++)
+         //{
+             if((fds[i].events & POLLIN))
+             {
+               printf("for i = %d \n",i);
+               if(i==0)Read_Print(fds[i].fd,fifo2);
+               else Read_Print(fds[i].fd,fifo1);
+             }
+         //}
+    //}
+    
+    
+    
+    
+    while(1)
+        {
+        char buffer[13];
+        int r=read(fd,buffer,13);
+        if(r<=0)break;
+        printf("              %s \n",buffer);
+        
+        }
